@@ -1,0 +1,7 @@
+{
+    "C_Cpp.errorSquiggles": "disabled",
+    "chat.tools.terminal.autoApprove": {
+        "&": true
+    },
+    "C_Cpp.dimInactiveRegions": true
+}
