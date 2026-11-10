@@ -90,14 +90,14 @@
 #endif /* ESP_PANEL_LCD_BUS_SKIP_INIT_HOST */
 #elif ESP_PANEL_LCD_BUS_TYPE == 2
 #elif ESP_PANEL_LCD_BUS_TYPE == 3
-    #define ESP_PANEL_LCD_RGB_CLK_HZ            (14 * 1000 * 1000)
-    #define ESP_PANEL_LCD_RGB_HPW               (10)
-    #define ESP_PANEL_LCD_RGB_HBP               (10)
-    #define ESP_PANEL_LCD_RGB_HFP               (20)
-    #define ESP_PANEL_LCD_RGB_VPW               (10)
-    #define ESP_PANEL_LCD_RGB_VBP               (10)
-    #define ESP_PANEL_LCD_RGB_VFP               (10)
-    #define ESP_PANEL_LCD_RGB_PCLK_ACTIVE_NEG   (0)
+    #define ESP_PANEL_LCD_RGB_CLK_HZ            (16 * 1000 * 1000)
+    #define ESP_PANEL_LCD_RGB_HPW               (4)
+    #define ESP_PANEL_LCD_RGB_HBP               (8)
+    #define ESP_PANEL_LCD_RGB_HFP               (8)
+    #define ESP_PANEL_LCD_RGB_VPW               (4)
+    #define ESP_PANEL_LCD_RGB_VBP               (8)
+    #define ESP_PANEL_LCD_RGB_VFP               (8)
+    #define ESP_PANEL_LCD_RGB_PCLK_ACTIVE_NEG   (1)
     #define ESP_PANEL_LCD_RGB_DATA_WIDTH        (16)
     #define ESP_PANEL_LCD_RGB_IO_HSYNC          (46)
     #define ESP_PANEL_LCD_RGB_IO_VSYNC          (3)
@@ -185,7 +185,7 @@
  * If set to 1, the bus will skip to initialize the corresponding host. Users need to initialize the host in advance.
  * It is useful if other devices use the same host. Please ensure that the host is initialized only once.
  */
-#define ESP_PANEL_LCD_TOUCH_BUS_SKIP_INIT_HOST  (0)
+#define ESP_PANEL_LCD_TOUCH_BUS_SKIP_INIT_HOST  (1)
 /**
  * LCD touch bus type. Choose one of the following:
  *      - 0: I2C

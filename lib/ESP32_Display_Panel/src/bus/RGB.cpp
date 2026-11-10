@@ -47,8 +47,8 @@ static esp_lcd_rgb_panel_config_t makeRGBConfig(uint16_t width, uint16_t height,
     return config;
 }
 
-ESP_PanelBus_RGB::ESP_PanelBus_RGB(const esp_lcd_rgb_panel_config_t *rgb_config, const esp_lcd_panel_io_3wire_spi_config_t *spi_config, int host_id)
-    : ESP_PanelBus(host_id)
+ESP_PanelBus_RGB::ESP_PanelBus_RGB(const esp_lcd_rgb_panel_config_t *rgb_config, const esp_lcd_panel_io_3wire_spi_config_t *spi_config, int)
+    : ESP_PanelBus()
 {
     if (rgb_config == nullptr || spi_config == nullptr) {
         ESP_LOGE(TAG, "Check NULL");
@@ -63,8 +63,8 @@ ESP_PanelBus_RGB::ESP_PanelBus_RGB(const esp_lcd_rgb_panel_config_t *rgb_config,
 /// @brief 
 /// @param rgb_config 
 /// @param host_id 
-ESP_PanelBus_RGB::ESP_PanelBus_RGB(const esp_lcd_rgb_panel_config_t *rgb_config, int host_id)
-    : ESP_PanelBus(host_id)
+ESP_PanelBus_RGB::ESP_PanelBus_RGB(const esp_lcd_rgb_panel_config_t *rgb_config, int)
+    : ESP_PanelBus()
 {
     if (rgb_config == nullptr) {
         ESP_LOGE(TAG, "Check NULL");

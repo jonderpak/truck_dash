@@ -116,11 +116,15 @@ void ESP_Panel::init(void)
             },
         },
         .data_width = ESP_PANEL_LCD_RGB_DATA_WIDTH,
+        .bits_per_pixel = ESP_PANEL_LCD_COLOR_BITS,
+        .num_fbs = 1,
+        .bounce_buffer_size_px = 10 * ESP_PANEL_LCD_H_RES,
         .psram_trans_align = 64,
         .hsync_gpio_num = ESP_PANEL_LCD_RGB_IO_HSYNC,
         .vsync_gpio_num = ESP_PANEL_LCD_RGB_IO_VSYNC,
         .de_gpio_num = ESP_PANEL_LCD_RGB_IO_DE,
         .pclk_gpio_num = ESP_PANEL_LCD_RGB_IO_PCLK,
+        .disp_gpio_num = ESP_PANEL_LCD_RGB_IO_DISP,
         .data_gpio_nums = {
             ESP_PANEL_LCD_RGB_IO_DATA0,
             ESP_PANEL_LCD_RGB_IO_DATA1,
@@ -139,7 +143,6 @@ void ESP_Panel::init(void)
             ESP_PANEL_LCD_RGB_IO_DATA14,
             ESP_PANEL_LCD_RGB_IO_DATA15,
         },
-        .disp_gpio_num = ESP_PANEL_LCD_RGB_IO_DISP,
         .flags = {
             .fb_in_psram = 1,
         },
